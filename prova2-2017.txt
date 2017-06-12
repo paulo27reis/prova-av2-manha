@@ -1,0 +1,75 @@
+Unilasalle-RJ - AV2
+Aluno: Paulo César Reis Da Silva Junior
+Prova Av2 de Laboratorio de Sistemas Operacionais
+Professor: Alex Salgado
+1o. Semestre de 2017   Turno: Manhã
+--------------------------------------------------
+1-Faça um script shell que:
+- Pergunte por um nome e crie uma pasta e um arquivo.txt com o mesmo nome inserido.
+
+2-Quantos erros tem no script abaixo? Qual(is) são eles?
+case "$file" in
+    *.txt}
+        echo "É um arquivo de texto."
+        cat "$file"
+        
+    *.gif|*.jpg|*.png}
+        echo "É uma figura."
+        xloadimage "$file"
+        
+    *}
+        echo "Não sei que arquivo é esse."
+        
+esac
+
+3-Usando estrutura de repetição, faça um script para exibir todos os arquivos
+da pasta atual com tamanho maior que 500kb.
+
+4-Usando estrutura de repetição, faça um script para calcular e exibir quantas
+pastas e quantos arquivos tem na pasta atual.
+
+5-Faça um script que leia um numero IP e retorna se endereço responde ou não ao 
+comando ping.
+Além disso, se for digitado um ip vazio, o script deve informar ao usuario.
+
+Respostas aqui:
+-----------------------------------------------------
+1-#!/bin/bash
+echo “digite um nome!”
+read novo
+novo_dir=/home/aluno/prova-av2-manha/novo_dir
+mkdir $novo_dir
+
+cd /home/aluno/prova-av2-manha/
+touch $novo_dir.txt
+------------------------------------------------------
+2-
+3 erros
+-----------------------------------------------------
+3-
+#!/bin/bash
+if (file > 500k)
+for i in ( ls -al grep ‘d’ awk ‘{ print 8 }’ ); do
+
+du -h i
+done
+----------------------------------------------------
+4-
+#!/bin/bash
+
+ls ../prova-av2-manha | wc -l
+------------------------------------------------------
+5-
+#!/bin/bash
+
+echo “digite um ip valido!”
+
+read ip;
+
+if [ -z$ip ];
+  then
+    echo “O IP esta vazio!”
+  else
+    ping $ip
+
+fi
